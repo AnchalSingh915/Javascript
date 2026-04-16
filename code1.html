@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+       <title></title>
+	   <script>
+           function calculate() 
+		   {
+             var a,b,op,c;
+			 a = parseInt(document.getElementById("t1").value);
+             b = parseInt(document.getElementById("t2").value);
+             op = document.getElementById("operation").value;
+
+             if (op == "sum") 
+	         {
+               c = a + b;
+             } 
+             else if (op == "sub") 
+	         {
+               c = a - b;
+             }   
+             else if (op == "mul")
+	         {
+               c = a * b;
+             } 
+             else if (op == "div")
+	         {
+               c = a / b;
+             }
+
+              document.getElementById("t3").value = c;
+          }
+       </script>
+
+<body>
+    <table>
+        <tr>
+            <td>No 1</td>
+            <td><input type="text" id="t1"></td>
+        </tr>
+        <tr>
+            <td>No 2</td>
+            <td><input type="text" id="t2"></td>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td><input type="text" id="t3" readonly></td>
+        </tr>
+    </table>
+
+    <select id="operation">
+        <option value="">Select calculator</option>
+        <option value="sum">Sum</option>
+        <option value="sub">Sub</option>
+        <option value="mul">Mul</option>
+        <option value="div">Div</option>
+    </select>
+
+    <br><br>
+
+    <input type="button" value="Result" onclick="calculate()">
+</body>
+</html>

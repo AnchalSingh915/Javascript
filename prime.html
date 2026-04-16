@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+       <title></title>
+	   
+	   <script>
+           function getprime() 
+		   {
+             var a = parseInt(document.getElementById("b1").value);
+             var x = parseInt(document.getElementById("b2").value);
+             var result = "";
+
+             for (var y = a; y <= x; y++) 
+			 {
+               var z = 0;
+
+               for (var l = 1; l <= y; l++) 
+			   {
+                 if (y % l == 0) 
+				 {
+                   z=z+1;
+                 }
+               }
+
+              if (z == 2)
+			  {
+                result = result + y + " ";
+              }
+           }
+             document.getElementById("b3").value = result;
+          }
+       </script>
+
+<body>
+   <table align="center" border="1" height="200px" width="400px">
+     <tr>
+       <td>Start</td>
+       <td><input type="number" min="1" id="b1"/></td>
+     </tr>
+     <tr>
+       <td>End</td>
+       <td><input type="number" min="1" id="b2"/></td>
+     </tr>
+     <tr>
+       <td>Prime Numbers</td>
+       <td><textarea rows="4" cols="30"id="b3" readonly></textarea></td>
+     </tr>
+     <tr>
+       <td></td>
+       <td><input type="button" value="Generator" onclick="getprime()"></td>
+     </tr>
+   </table>
+</body>
+</html>		   

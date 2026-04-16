@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+       <title></title>
+	   <script>
+	    function getfactorial()
+        {
+          var x,y=1;
+          x=parseInt(document.cal.t1.value);
+          for(;x>=1;x--)
+           y=y*x;
+           document.cal.t2.value=y;
+        }
+        
+
+        function getprime()
+        {
+          var x,y=0,z=0;
+          x=parseInt(document.cal.b1.value);
+          for(y=1;y<=x;y++)
+		  {
+		    if(x%y==0)
+			 z=z+1;
+		  }
+          if(z==2)		  
+           document.cal.b2.value="prime";
+		  else
+           document.cal.b2.value="not prime";		  
+        }
+
+
+        function getneon()
+        {
+          var x=0,y=1,z=0,l=0;
+          x=parseInt(document.cal.c1.value);
+		  l=x*x;
+          for(;l>0;)
+		  {
+		    y=l%10;
+			z=z+y;
+			l=Math.floor(l / 10);
+		  }
+          if(z==x)		  
+           document.cal.c2.value="neon";
+		  else
+           document.cal.c2.value="not neon";		  
+        }
+   
+
+        function getarmstrong()
+        {
+          var x=0,y=0,z=0,a=0;
+          x=parseInt(document.cal.d1.value);
+		  a=x;
+          for(;x>0;)
+		  {
+		    y=x%10;
+			z=z+y*y*y;
+			x=Math.floor(x / 10);
+		  }
+          if(z==a)		  
+           document.cal.d2.value="armstrong";
+		  else
+           document.cal.d2.value="not armstrong";		  
+        }   
+		
+		
+		function getspy()
+        {
+          var x=0,y=0,z=1,a=0;
+          x=parseInt(document.cal.e1.value);
+          for(;x>0;)
+		  {
+		    a=x%10;
+			y=y+a;
+			z=z*a;
+			x=Math.floor(x / 10);
+		  }
+          if(z==y)		  
+           document.cal.e2.value="spy";
+		  else
+           document.cal.e2.value="not spy";		  
+        }
+		
+		
+		function getpalindrome()
+        {
+          var a=0,b=0,c=0,d=0;
+          x=parseInt(document.cal.f1.value);
+		  d=a;
+          for(;a>0;)
+		  {
+		    b=a%10;
+			c=c*10+b;
+			a=Math.floor(a / 10);
+		  }
+          if(c==d)		  
+           document.cal.f2.value="palindrome";
+		  else
+           document.cal.f2.value="not palindrome";		  
+        }
+		
+		
+		function getniven()
+        {
+          var a=0,b=0,c=1,d=0;
+          a=parseInt(document.cal.g1.value);
+		  b=a;
+          for(;a>0;)
+		  {
+		    c=a%10;
+			d=d+c;
+			a=Math.floor(a / 10);
+		  }
+          if(b%d==0)		  
+           document.cal.g2.value="niven";
+		  else
+           document.cal.g2.value="not niven";		  
+        }
+	   </script>
+</head>
+<body>
+    <form name="cal">
+       <table>
+        <tr>
+          <td>Number</td>
+          <td><input type="text" name="t1"/></td>
+        </tr>
+        <tr>
+		  <td>Factorial</td>
+		  <td><input type="text" name="t2" readonly/></td>
+        </tr>
+		<tr>
+		  <td></td>
+		  <td><input type="button" value="Factorial" onclick="getfactorial()"></td>
+        </tr>
+       </table> 
+	   
+	   
+	   
+   
+       <table>
+        <tr>
+          <td>Number</td>
+          <td><input type="text" name="b1"/></td>
+        </tr>
+        <tr>
+		  <td>prime or not prime</td>
+		  <td><input type="text" name="b2" readonly/></td>
+        </tr>
+		<tr>
+		  <td></td>
+		  <td><input type="button" value="prime" onclick="getprime()"></td>
+        </tr>
+       </table> 
+
+
+       <table>
+        <tr>
+          <td>Number</td>
+          <td><input type="text" name="c1"/></td>
+        </tr>
+        <tr>
+		  <td>neon or not neon</td>
+		  <td><input type="text" name="c2" readonly/></td>
+        </tr>
+		<tr>
+		  <td></td>
+		  <td><input type="button" value="neon" onclick="getneon()"></td>
+        </tr>
+       </table> 
+
+
+      <table>
+        <tr>
+          <td>Number</td>
+          <td><input type="text" name="d1"/></td>
+        </tr>
+        <tr>
+		  <td>Armstrong or not Armstrong</td>
+		  <td><input type="text" name="d2" readonly/></td>
+        </tr>
+		<tr>
+		  <td></td>
+		  <td><input type="button" value="armstrong" onclick="getarmstrong()"></td>
+        </tr>
+       </table> 
+
+
+       <table>
+        <tr>
+          <td>Number</td>
+          <td><input type="text" name="e1"/></td>
+        </tr>
+        <tr>
+		  <td>spy or not spy</td>
+		  <td><input type="text" name="e2" readonly/></td>
+        </tr>
+		<tr>
+		  <td></td>
+		  <td><input type="button" value="spy" onclick="getspy()"></td>
+        </tr>
+       </table>
+
+
+       <table>
+        <tr>
+          <td>Number</td>
+          <td><input type="text" name="f1"/></td>
+        </tr>
+        <tr>
+		  <td>palindrome or not palindrome</td>
+		  <td><input type="text" name="f2" readonly/></td>
+        </tr>
+		<tr>
+		  <td></td>
+		  <td><input type="button" value="palindrome" onclick="getpalindrome()"></td>
+        </tr>
+       </table>	
+
+
+      <table>
+        <tr>
+          <td>Number</td>
+          <td><input type="text" name="g1"/></td>
+        </tr>
+        <tr>
+		  <td>niven or not niven</td>
+		  <td><input type="text" name="g2" readonly/></td>
+        </tr>
+		<tr>
+		  <td></td>
+		  <td><input type="button" value="niven" onclick="getniven()"></td>
+        </tr>
+       </table>	   	   
+    </form>	   
+<body>
+</html>

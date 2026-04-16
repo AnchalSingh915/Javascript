@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+       <title></title>
+	   <script>
+           function calculate() 
+		   {
+		     var r,t,si,p;
+			 p=parseFloat(document.getElementById("t1").value);
+			 r=parseFloat(document.getElementById("t2").value);
+			 t=parseFloat(document.getElementById("t3").value);
+			 si=(p*r*t)/100;
+			 document.getElementById("t4").value=si;
+			 document.body.style.backgroundColor = "lightgreen";
+		   }
+
+       </script>
+<body>
+    <h1 align="center">SIMPLE INTEREST CALCULATOR</h1>
+    <table border="1" align="center" height="200px" width="500px" cellpadding="10px" cellspacing="0px">
+        <tr>
+		   <td>Amount</td>
+		   <td><input type="number" min="0" id="t1"></td>
+		</tr>
+		<tr>
+		   <td>Rate</td>
+		   <td><input type="number" min="0" id="t2"></td> 
+		</tr>
+		<tr>
+		   <td>Time</td>
+		   <td><input type="number" min="0" id="t3"></td>
+		</tr>
+		<tr>
+		   <td>Simple Interest</td>
+		   <td><input type="number" min="0" id="t4" readonly></td>
+		</tr>
+		<tr>
+		   <td></td>
+		   <td><input type="Button" value="calculate" onclick="calculate()"></td>
+		</tr>
+    </table>
+</body>
+</html>	
+	
+	

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+       <title></title>
+</head>
+<body>
+    Select Date : 
+	<select>
+		<option>Select date </option>
+		<script>
+		for(a=1;a<=31;a++)
+		{
+			if(a<10)
+			{
+				document.write("<option>0"+a+"</option>");
+			}
+			else
+			{
+				document.write("<option>"+a+"</option>");
+			}
+		}
+		</script>
+	</select>
+	
+	
+	 Select Month : 
+	<select>
+		<option>Select Month </option>
+		<script>
+		for(a=1;a<=12;a++)
+		{
+			document.write("<option>"+a+"</option>");
+		}
+		</script>
+	</select>
+	
+	Select Year : 
+	<select>
+		<option>Select Year </option>
+		<script>
+		for(a=2026;a>=1990;a--)
+		{
+			document.write("<option>"+a+"</option>");
+		}
+		</script>
+	</select>
+<body>
+</html>

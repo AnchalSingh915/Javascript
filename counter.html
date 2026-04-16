@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+       <title></title>
+	   <style>
+	      div{
+		       border:1px solid red;
+			   height:70px;
+			   width:100px;
+			   margin:auto;
+			   margin-top:100px;
+			   padding:10px;
+			   font-size:60px;
+			   text-align:center;
+		     }
+	   </style>
+	   <script>
+	        var count=0;
+		   function increase()
+			{
+				count++;
+				document.getElementById("counter").innerHTML=count;
+			}
+			function decrease()
+			{
+				count--;
+				document.getElementById("counter").innerHTML=count;
+			}			
+	   </script>	   
+</head>
+<body>
+        <div id="counter">
+		  0
+		</div>
+		<p align="center"><input type="button" value="Increase" onclick="increase()"/>
+	       <input type="button" value="Decrease" onclick="decrease()"/>
+		</p>
+</body>
+</html>		   

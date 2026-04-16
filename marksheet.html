@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+       <title></title>
+	   <script>
+function Markscalculate() 
+		   {
+		     var h,e,m,s,ss,tm,per;
+			 h=parseFloat(document.getElementById("t1").value);
+			 e=parseFloat(document.getElementById("t2").value);
+			 m=parseFloat(document.getElementById("t3").value);
+			 s=parseFloat(document.getElementById("t4").value);
+			 ss=parseFloat(document.getElementById("t5").value);
+			 tm=h+e+m+s+ss;
+			 document.getElementById("t6").value=tm;
+			 per= tm*100/500;
+			 document.getElementById("t7").value=per;
+			 if(per>=90)
+			{
+				document.getElementById("t8").value="A+";
+			}
+			else if(per>=80)
+			{
+				document.getElementById("t8").value="A";
+			}
+			else if(per>=70)
+			{
+				document.getElementById("t8").value="B";
+			}
+			else if(per>=60)
+			{
+				document.getElementById("t8").value="C";
+			}
+			else if(per>=50)
+			{
+				document.getElementById("t8").value="D";
+			}
+			else 
+			{
+				document.getElementById("t8").value="Fail";
+			}
+		   } 		   
+       </script>
+<body>
+<h1 align="center">Mark-Sheet Calculator</h1>
+    <table border="1" align="center" height="200px" width="500px" cellpadding="10px" cellspacing="0px">
+        <tr>
+		   <td>Hindi</td>
+		   <td><input type="number" min="0" max="100" id="t1"/>(Max:100)</td>
+		</tr>
+		<tr>
+		   <td>English</td>
+		   <td><input type="number" min="0" max="100" id="t2"/>(Max:100)</td> 
+		</tr>
+		<tr>
+		   <td>Math</td>
+		   <td><input type="number" min="0" max="100" id="t3"/>(Max:100)</td>
+		</tr>
+		<tr>
+		   <td>Science</td>
+		   <td><input type="number" min="0" max="100" id="t4"/>(Max:100)</td>
+		</tr>
+		<tr>
+		   <td>Social-science</td>
+		   <td><input type="number" min="0" max="100" id="t5"/>(Max:100)</td>
+		</tr>
+		<tr>
+		   <td>Total Marks</td>
+		   <td><input type="number"  id="t6" readonly></td>
+		</tr>
+		<tr>
+		   <td>Percentage</td>
+		   <td><input type="number"  id="t7" readonly></td>
+		</tr>
+		<tr>
+		   <td>Grade</td>
+		   <td><input type="text"  id="t8" readonly></td>
+		</tr>
+		<tr>
+		   <td></td>
+		   <td><input type="Button" value="calculate" onclick="Markscalculate()"></td>
+		</tr>
+    </table>
+</body>
+</html>	

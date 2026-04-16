@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+       <title></title>
+	   <script>
+           function getlogin() 
+		   {
+             var a,b;
+			 a = document.getElementById("t1").value;
+             b = document.getElementById("t2").value;
+            if(a=="")
+			{
+				document.getElementById("t1").style.background="red";
+				document.getElementById("s1").innerHTML="Plz enter the User name";
+			}
+			else
+			{
+				document.getElementById("t1").style.background="green";
+				document.getElementById("s1").innerHTML="";
+			}
+              
+			if(b=="")
+			{
+				document.getElementById("t2").style.background="red";
+				document.getElementById("s2").innerHTML="Plz enter the Password";
+			}
+			else
+			{
+				document.getElementById("t2").style.background="green";
+				document.getElementById("s2").innerHTML="";
+			}
+          }
+       </script>
+
+<body>
+    <table>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" id="t1"></td>
+			<td><span id="s1"></span></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="Password" id="t2"></td>
+			<td><span id="s2"></span></td>
+        </tr>
+        <tr>
+            <td></td>			
+            <td><input type="button" value="Login" onclick="getlogin()"></td>
+			<td></td>
+        </tr>
+    </table>
