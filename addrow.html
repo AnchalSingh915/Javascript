@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+   <title></title>
+   <style>
+         table{
+		        margin:auto;
+		      }
+		 input[type="button"]
+         {
+		   margin-top:70px;
+		   margin-left:590px;
+		 }		 
+   </style>
+   <script>
+          var c=1;
+         function row()
+		 {
+		   var x,y;
+		   x=document.getElementById("a1").innerHTML;
+		   y="<tr><td>"+c+"</td><td><input type='text'/></td><td><input type='number'/></td><td><input type='number'/></td><td><input type='number'/></td></tr>"
+		   document.getElementById("a1").innerHTML=x+y;
+		   c++;
+		 }
+   </script>
+</head>
+<body>
+      <table id="a1" border="1" cellpadding="10px" cellspacing="0px">
+	      <tr>
+		    <th>Sr No.</th>
+			<th>University/Board</th>
+			<th>Passing Year</th>
+			<th>Total Marks</th>
+			<th>Obtain Marks</th>
+		  </tr>
+	  </table>
+	  <input type="button" value="ADD ROW" onclick="row()"/>
+</body>
+</html>

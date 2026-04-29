@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+   <title></title>
+   <style>
+        #container{
+					margin:auto;
+					margin-top:200px;
+					height:220px;
+					width:250px;
+					padding:20px;
+					border-radius:15px;
+					background:pink;
+		          }
+   </style>
+   <script>
+        function background()
+			{
+			    var r,g,b;
+			    r=document.getElementById("red").value;
+				document.getElementById("a1").innerHTML=r;
+				g=document.getElementById("green").value;
+				document.getElementById("a2").innerHTML=g;
+				b=document.getElementById("blue").value;
+				document.getElementById("a3").innerHTML=b;
+				document.getElementById("container").style.background="rgb("+r+","+g+","+b+")";
+			}
+   </script>
+</head>
+<body>
+    <div id="container">
+	    <h4>RGB Background Color (RGB)</h4>
+		<table>
+				<tr>
+					<td>Red : </td>
+					<td><input id="red" name="r" type="range" min=0 max=255 value="0" onchange="background()"/></td>
+					<td><p id="a1">0</p></td>
+				</tr>
+				<tr>
+					<td>Green : </td>
+					<td><input id="green" name="g" type="range" min=0 max=255 value="0" onchange="background()"/></td>
+					<td><p id="a2">0</p></td>
+				</tr>
+				<tr>
+					<td>Blue : </td>
+					<td><input id="blue" name="b" type="range" min=0 max=255 value="0" onchange="background()"/></td>
+					<td><p id="a3">0</p></td>
+				</tr>
+			</table>
+	</div>
+</body>
+</html>

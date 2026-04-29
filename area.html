@@ -64,12 +64,12 @@
 </head>
 <body>
      <div class="container">
-        <h1>Circle Area Calculator</h1>
+        <h1>Temperature Converter</h1>
         <div class="slider-container">
-            <label for="radius">Radius (cm): <span id="radiusValue">50</span></label>
-            <input type="range" id="radius" min="1" max="100" value="50" oninput="updateRadiusValue(this.value)">
+            <label for="celcius">Celcius 0 C: <span id="celciusValue">0</span></label>
+            <input type="range" id="celcius" min="-100" max="100" value="50" oninput="updateCelciusValue(this.value)">
         </div>
-        <button onclick="calculateArea()">Calculate Area</button>
+        <button onclick="calculateFehrenheit()">Convert to Fehrenheit</button>
         <div id="result"></div>
     </div>
 <body>

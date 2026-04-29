@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+   <title></title>
+   <style>
+         #box{
+		       border:3px solid black;
+			   border-radius:15px;
+			   height:190px;
+			   width:300px;
+			   margin:auto;
+			   padding:7px;
+		     }	
+         #a2{
+		      padding:10px;
+			  border:1px solid black;
+			  background:yellow;
+			  margin:10px;
+			  float:right;
+		    }			 
+   </style>
+   <script>
+       function count() 
+	   {
+         var textarea = document.getElementById("a3").value;
+    
+           if (textarea.value.length > 100)
+		   {
+             textarea.value = textarea.value.substring(0, 100);
+           }
+         document.getElementById("a2").innerHTML = 100 - textarea.value.length;
+       }
+</script>
+</head>
+<body>
+     <div id="box">
+        <span id="a1"><b>Way2 msg</b></span>
+        <span id="a2">100</span>
+        <textarea id="a3" name="character" rows="7" cols="38" onkeyup="count()"></textarea>
+     </div>
+</body>
+</html>
