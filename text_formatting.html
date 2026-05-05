@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+   <title></title>
+   <style>
+         #box{
+		       height:300px;
+			   width:350px;
+			   border:1px black solid;
+		     }	
+			 
+   </style>
+   <script>
+       var k=0, m=0, n=0; 
+       function print_character()
+	   {
+         var t = document.getElementById("box_text").value;
+         document.getElementById("box").innerText = t;
+       }
+       function bold_character()
+	   {
+	     if(k==0)
+		 { 
+            document.getElementById("box").style.fontWeight ="";
+		    document.getElementById("b").style.background ="";
+			k=1;
+         }
+	     else
+		 { 
+            document.getElementById("box").style.fontWeight = "bold";
+		    document.getElementById("b").style.background = "yellow";
+			k=0;
+         }
+	   }
+       function italic_character() 
+	   {
+	     if(m==0)
+		 {
+          document.getElementById("box").style.fontStyle = "";
+		  document.getElementById("i").style.background = "";
+		  m=1;
+		 }
+		 else
+		 {
+          document.getElementById("box").style.fontStyle = "italic";
+		  document.getElementById("i").style.background = "yellow";
+		  m=0;
+		 }
+       }
+       function underline_character() 
+	   {
+	    if(n==0)
+		 {
+          document.getElementById("box").style.textDecoration = "";
+		  document.getElementById("u").style.background = "";
+		  n=1;
+		 }
+		 else
+		 {
+          document.getElementById("box").style.textDecoration = "underline";
+		  document.getElementById("u").style.background = "yellow";
+		  n=0;
+		 }
+       }
+</script>
+</head>
+<body>
+     <p>Enter your text here</p>
+	 <textarea id="box_text" rows="20" cols="45" placeholder="Type your text here...." onkeyup="print_character()"></textarea>
+	 <br/>
+	 <br/>
+	 <div id="line">
+	 <input id="b" type="button" value="Bold" onclick="bold_character()"/>
+	 <input id="i" type="button" value="italic" onclick="italic_character()"/>
+	 <input id="u" type="button" value="underline" onclick="underline_character()"/>
+	 </div>
+	 <br/>
+	 <div id="box"></div>
+</body>
+</html>
